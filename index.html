@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-5 md:p-10">
+
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-blue-900 mb-8">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold">Total</p>
+                <h2 id="total-count" class="text-4xl font-bold">8</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold">Interview</p>
+                <h2 id="interview-count" class="text-4xl font-bold text-green-600">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold text-red-500">0</h2>
+            </div>
+            </div>
+
+            <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-blue-900">Available Jobs</h2>
+            <p id="tab-job-count" class="text-gray-500 font-medium">8 jobs</p>
+                 </div>
+
+        <div class="flex space-x-3 mb-8">
+            <button onclick="switchTab('All')" id="btn-All" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold">All</button>
+            <button onclick="switchTab('Interview')" id="btn-Interview" class="bg-gray-200 text-gray-700 px-5 py-2 rounded-lg font-semibold">Interview</button>
+            <button onclick="switchTab('Rejected')" id="btn-Rejected" class="bg-gray-200 text-gray-700 px-5 py-2 rounded-lg font-semibold">Rejected</button>
+        </div>
+
+        <div id="jobs-list" class="space-y-6"></div>
+        </div>
+    <script src="data.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>
